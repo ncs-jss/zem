@@ -1,0 +1,31 @@
+{
+  "name": "zem",
+  "version": "1.0.0",
+  "description": "Zealicon Event Manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js --ignore client/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncs-jss/zem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncs-jss/zem/issues"
+  },
+  "homepage": "https://github.com/ncs-jss/zem#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.9",
+    "morgan": "^1.9.0",
+    "superagent": "^3.8.2"
+  }
+}
