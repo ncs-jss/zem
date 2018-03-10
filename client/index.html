@@ -1,25 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>ZEM</title>
-  <script type="text/javascript">
-  (function(p, u, s, h) {
-    p._pcq = p._pcq || [];
-    p._pcq.push(['_currentTime', Date.now()]);
-    s = u.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = 'https://cdn.pushcrew.com/js/1b769c4903ff17fda579db2c41a2238e.js';
-    h = u.getElementsByTagName('script')[0];
-    h.parentNode.insertBefore(s, h);
-  })(window, document);
-  </script>
-</head>
-<body>
-  <ul class="event-list">
-  </ul>
-</body>
-<script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>ZEM</title>
+    <link rel="shortcut icon" href="logo-xs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#231f40">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript">
+      (function(p, u, s, h) {
+        p._pcq = p._pcq || [];
+        p._pcq.push(['_currentTime', Date.now()]);
+        s = u.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://cdn.pushcrew.com/js/1b769c4903ff17fda579db2c41a2238e.js';
+        h = u.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s, h);
+      })(window, document);
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">
+          <p class="flow-text" style="margin-top: 30px;">
+            <span style="font-weight: bold; font-size: 26px;">ZEM </span>
+            <span style="color: #e12a67; font-size: 26px; font-weight: bold;">2018</span>
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="row eventRow">
+      <ul class="tabs z-depth-3">
+        <li class="tab col s3"><a href="#1" class="active">DAY-1</a></li>
+        <li class="tab col s3"><a href="#2">DAY-2</a></li>
+        <li class="tab col s3"><a href="#3">DAY-3</a></li>
+        <li class="tab col s3"><a href="#4">DAY-4</a></li>
+      </ul>
+      <div class="event-list-wrapper">
+        <div id="1" class="event-day-list col s12">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <div class="daydate" style="font-weight: bold;">Thursday
+                <br>14th March 2018
+              </div>
+              <span class="secondary-content" style="color: black; margin-top: 14px;">
+              Notify Me
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div id="2" class="event-day-list col s12">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <div class="daydate" style="font-weight: bold;">Friday
+                <br>15th March 2018
+              </div>
+              <span class="secondary-content" style="color: black; margin-top: 14px;">
+              Notify Me
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div id="3" class="event-day-list col s12">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <div class="daydate" style="font-weight: bold;">Saturday
+                <br>16th March 2018
+              </div>
+              <span class="secondary-content" style="color: black; margin-top: 14px;">
+              Notify Me
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div id="4" class="event-day-list col s12">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <div class="daydate" style="font-weight: bold;">Sunday
+                <br>17th March 2018
+              </div>
+              <span class="secondary-content" style="color: black; margin-top: 14px;">
+              Notify Me
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+    <!-- <script src="materialize/js/materialize.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+    <script src="javascript/utils.js"></script>
+    <script src="javascript/index.js"></script>
+  </body>
 </html>

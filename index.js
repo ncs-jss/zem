@@ -28,9 +28,6 @@ app.use(bodyParser.json());
 require('./routes')(app);
 
 app.use(express.static('client'));
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'index.html'));
-});
 
 app.listen(process.env.port, () => {
   console.log(`app listening on port ${process.env.port}`);

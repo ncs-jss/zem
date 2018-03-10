@@ -26,9 +26,7 @@ module.exports = app => {
   app.get('/api/events/day/:number', async (req, res) => {
     const numOfDay = parseInt(req.params.number);
     const events = await Event.find({
-      schedule: {
-        day: numOfDay
-      }
+      'schedule.day': numOfDay
     });
     res.send(events);
   });

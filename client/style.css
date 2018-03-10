@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "LemonMilk";
+    src: url("font/LemonMilk.otf") format("opentype");
+}
+
+.nav-wrapper {
+    background-color: #231f40;
+}
+
+nav {
+    height: 80px;
+    line-height: 30px;
+    font-family: 'LemonMilk';
+}
+
+nav i,
+nav [class^="mdi-"],
+nav [class*="mdi-"],
+nav i.material-icons {
+    height: 80px;
+    line-height: 30px;
+}
+
+nav .button-collapse i {
+    height: 80px;
+    line-height: 30px;
+}
+
+nav .brand-logo {
+    font-size: 1.6rem;
+}
+
+.tabs {
+    background-color: #231f40;
+}
+
+.tabs .tab a {
+    color: white;
+}
+
+/*Black color to the text*/
+
+
+/*Text color on hover*/
+
+.tabs .tab a.active {
+    color: #e12a67;
+}
+
+
+/*Background and text color when a tab is active*/
+
+.tabs .indicator {
+    background-color: #e12a67;
+    color: white;
+}
+
+
+/*Color of underline*/
+
+.z-depth-3 {
+    box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.14), 0 1px 0px 0 rgba(0, 0, 0, 0.12), 0 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.timing {
+    position: absolute;
+    width: 70px;
+    height: 42px;
+    overflow: hidden;
+    left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 11px;
+    font-size: 16px;
+}
+
+.daydate {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-size: 16px;
+}
+
+.collection .collection-item.avatar {
+    min-height: 84px;
+    padding-left: 95px;
+    position: relative;
+    padding-top: 18px;
+}
+
+
+.switch label .lever:after {
+    background-color: #bdbdbd;
+}
+
+.switch label .lever {
+    background-color: #e3e3e3;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #e05680;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #eb94af;
+}
+
+.switch {
+    margin-top: 10px;
+}
+
+.event-list-wrapper {
+    position: relative;
+}
+
+.event-day-list {
+    position: absolute;
+}

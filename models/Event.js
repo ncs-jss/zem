@@ -7,6 +7,9 @@ var eventSchema = new Schema({
   description: {
     type: String
   },
+  location: {
+    type: String
+  },
   segment_id: {
     type: String
   },
