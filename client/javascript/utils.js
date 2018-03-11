@@ -18,6 +18,9 @@ function event_formatter(events) {
     { events: [] }
   ];
   events.forEach(event => {
+    if(window.subscriptions.includes(event.name)) {
+      event.subscribed = true;
+    }
     formatted_events[event.schedule.day - 1].events.push(event);
   })
   return formatted_events;

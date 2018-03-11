@@ -1,5 +1,6 @@
 window.onload = function() {
   window._pcq = window._pcq || [];
+  window.subscriptions = JSON.parse(localStorage.getItem('subscriptions')) || [];
   const EventTab = (function() {
     let currentTab = 1;
     const eventRowElem = document.querySelector('.eventRow');
@@ -60,6 +61,8 @@ window.onload = function() {
           const time = `${event_hour}.${event_minute}`;
           const time_period = event_hour < 12 ? 'am' : 'pm';
 
+          const checked = event.subscribed ? 'checked' : null;
+
           return `<li class="collection-item avatar">
                   <div class="timing">
                     <span>${time} ${time_period}</span>
@@ -70,7 +73,7 @@ window.onload = function() {
                   <span class="secondary-content">
                     <div class="switch">
                       <label>
-                        <input class="event-action" data-index="${index}" type="checkbox">
+                        <input class="event-action" data-index="${index}" type="checkbox" ${checked}>
                         <span class="lever z-depth-1"></span>
                       </label>
                     </div>
@@ -96,10 +99,20 @@ window.onload = function() {
           const elemIndex = parseInt(elem.dataset.index);
           const dayNum = EventTab.getCurrentTab();
           const event = formatted_events[dayNum - 1].events[elemIndex];
-          console.log('event', event);
-          window._pcq.push(['addSubscriberToSegment', event.name, function(status) {
-            console.log('status', status);
-          }]);
+          if(event.subscribed) {
+            window._pcq.push(['removeSubscriberFromSegment', event.name, function(status) {
+              console.log('index', window.subscriptions.indexOf(event.name));
+              window.subscriptions.splice( window.subscriptions.indexOf(event.name), 1 );
+              console.log('index2', window.subscriptions.indexOf(event.name));
+              event.subscribed = false;
+              console.log('status', status);
+            }]);
+          } else {
+            window._pcq.push(['addSubscriberToSegment', event.name, function(status) {
+              (!window.subscriptions.includes(event.name)) && window.subscriptions.push(event.name);
+              console.log('status', status);
+            }]);
+          }
         }
       }
 
@@ -114,4 +127,8 @@ window.onload = function() {
     })()
 
   });
+}
+
+window.onunload = function() {
+  localStorage.setItem('subscriptions', JSON.stringify(window.subscriptions));
 }
